@@ -6,18 +6,6 @@ provider "oci" {
   region       = var.region
 }
 
-data "oci_core_images" "os_images" {
-  compartment_id           = var.compartment_ocid
-  operating_system         = var.operating_system
-  operating_system_version = var.operating_system_version
-
-  # Key fix: only return images compatible with the chosen shape
-  shape = var.shape
-
-  sort_by    = "TIMECREATED"
-  sort_order = "DESC"
-}
-
 resource "oci_core_instance" "vm" {
   compartment_id      = var.compartment_ocid
   availability_domain = var.availability_domain
@@ -36,7 +24,7 @@ resource "oci_core_instance" "vm" {
 
   source_details {
     source_type = "image"
-    source_id   = data.oci_core_images.os_images.images[0].id
+    source_id   = var.image_ocid
   }
 
   metadata = {

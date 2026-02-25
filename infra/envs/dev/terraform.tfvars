@@ -13,8 +13,8 @@ memory_in_gbs = 6
 
 ssh_public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOib2dZknOdOFJIXHjTPDar8u4bCNu5mvDXN+rhRaFed oci-devops-lab"
 
-operating_system         = "Ubuntu"
-operating_system_version = "22.04"
+# Paste the Image OCID you copied from OCI (Oracle Linux 9 or Ubuntu 22.04) in ap-mumbai-1
+image_ocid = "ocid1.image.oc1.ap-mumbai-1.aaaaaaaak2cwx4xjgmmtxoyodqya5cmsfblxi56tmke7mnohv3hyyoz4ilyq"
 
 freeform_tags = {
   owner       = "shefali"
