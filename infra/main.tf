@@ -11,6 +11,9 @@ data "oci_core_images" "os_images" {
   operating_system         = var.operating_system
   operating_system_version = var.operating_system_version
 
+  # Key fix: only return images compatible with the chosen shape
+  shape = var.shape
+
   sort_by    = "TIMECREATED"
   sort_order = "DESC"
 }

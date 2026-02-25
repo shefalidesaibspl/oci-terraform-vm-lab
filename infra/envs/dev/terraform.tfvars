@@ -13,7 +13,7 @@ memory_in_gbs = 6
 
 ssh_public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOib2dZknOdOFJIXHjTPDar8u4bCNu5mvDXN+rhRaFed oci-devops-lab"
 
-operating_system         = "Canonical Ubuntu"
+operating_system         = "Ubuntu"
 operating_system_version = "22.04"
 
 freeform_tags = {
