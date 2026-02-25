@@ -11,6 +11,13 @@ data "oci_core_images" "os_images" {
   operating_system         = var.operating_system
   operating_system_version = var.operating_system_version
 
+  # Ensure we pick standard platform images compatible with E4 (x86_64)
+  filter {
+    name   = "display_name"
+    values = [".*x86_64.*"]
+    regex  = true
+  }
+
   sort_by    = "TIMECREATED"
   sort_order = "DESC"
 }
