@@ -21,11 +21,6 @@ variable "memory_in_gbs" { type = number }
 
 variable "ssh_public_key" { type = string }
 
-variable "operating_system" {
-  type        = string
-  description = "Ubuntu or Oracle Linux"
-}
-
 variable "image_ocid" { type = string }
 
 variable "freeform_tags" {
