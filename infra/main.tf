@@ -19,7 +19,7 @@ resource "oci_core_instance" "vm" {
 
   create_vnic_details {
     subnet_id        = var.subnet_ocid
-    assign_public_ip = true
+    assign_public_ip = false
   }
 
   source_details {
