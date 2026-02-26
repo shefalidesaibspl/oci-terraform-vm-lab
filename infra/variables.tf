@@ -28,10 +28,6 @@ variable "operating_system" {
 
 variable "image_ocid" { type = string }
 
-variable "operating_system_version" {
-  type        = string
-  description = "Example: 22.04 for Ubuntu, 9 for Oracle Linux"
-}
 variable "freeform_tags" {
   type    = map(string)
   default = {}
